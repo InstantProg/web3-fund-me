@@ -13,9 +13,8 @@ describe("FundMe", async function () {
         await deployments.fixture(["all"]) //lets us run our entire deploy folder with tags
         console.log(`Your deployer is: ${deployer}`)
 
-
-        fundMe = await ethers.getContractAt("FundMe", deployer)
-        mockV3Aggregator = await ethers.getContractAt(
+        fundMe = await ethers.getContract("FundMe", deployer)
+        mockV3Aggregator = await ethers.getContract(
             "MockV3Aggregator",
             deployer
         )
