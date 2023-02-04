@@ -1,5 +1,6 @@
 const { network } = require("hardhat")
 const { verify } = require("../utils/verify")
+const { networkConfig } = require("../helper-hardhat-config")
 //
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
@@ -35,4 +36,3 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     }
 }
 module.exports.tags = ["all", "fundme"]
-
