@@ -44,7 +44,7 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 The `FundMe` smart contract allows users to fund the contract and withdraw the funds. The contract owner can withdraw the funds on behalf of the contract. Here are some example functions:
 
-```solididty
+```solidity
 function fund() public payable {}
 
 function withdraw() public onlyOwner {}
