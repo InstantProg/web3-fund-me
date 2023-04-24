@@ -1,44 +1,43 @@
-# FundMe
+# FundMe Contract
 
-FundMe is a smart contract for crowdfunding built on the Ethereum blockchain. It uses Chainlink's Price Feed to ensure a minimum funding amount is met.
+This contract is a simple crowdfunding smart contract implemented on the Ethereum blockchain.
 
 ## Getting Started
 
-To get started, you need to have Node.js and npm installed. Clone the repository and navigate to the project directory. Then, install the required dependencies:
+To get started, clone this repository and run the following commands:
 
-```bash
+```
 npm install
 ```
 
+This will install all the necessary dependencies for this project.
+
 ## Testing
 
-To run the unit tests for the smart contract, use the following command:
+To test the contract, run the following command:
 
-```bash
+```
 npx hardhat test
 ```
 
-## Deploying
+This will run the unit tests for the contract.
 
-To deploy the smart contract to a local development network, use the following command:
+## Deployment
 
-```bash
-npx hardhat run scripts/deploy.js --network localhost
-```
-
-To deploy the smart contract to a test network like Rinkeby, first create a `.env` file with your Rinkeby RPC URL and wallet private key:
+To deploy the contract, you will need to set up a `.env` file in the root of the project. The `.env` file should contain the following information:
 
 ```
-RINKEBY_RPC_URL=<your_rinkeby_rpc_url>
-PRIVATE_KEY=<your_wallet_private_key>
+INFURA_PROJECT_ID=<your Infura project ID>
+DEPLOYER_PRIVATE_KEY=<your private key>
 ```
 
-Then, use the following command to deploy:
+Once you have set up the `.env` file, you can run the following command to deploy the contract:
 
-```bash
-source .env
-npx hardhat run scripts/deploy.js --network rinkeby
 ```
+npx hardhat run scripts/deploy.js --network <network-name>
+```
+
+Replace `<network-name>` with the name of the network you want to deploy to (e.g. `goerli`, `kovan`, etc.).
 
 ## Usage
 
@@ -60,6 +59,10 @@ function getAddressToAmountFunded(address _funder) public view returns (uint256)
 function getPriceFeed() public view returns (AggregatorV3Interface) {}
 ```
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Contact
+
+If you have any questions or feedback, please feel free to contact me at learnfarrukh@gmail.com.
+
+
